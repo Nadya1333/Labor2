@@ -6,14 +6,16 @@ public class Lab2 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
+        System.out.println("Enter a numbers: ");
         while (!sc.hasNext("int")) {
             if (sc.hasNextInt()) {
                 int a = sc.nextInt();
                 int n = sc.nextInt();
                 int answer = 1;
-                for (int i = 1; i <= n; i++) {
+                int counter = 1;
+                while (counter <= n) {
                     answer *= a;
+                    counter++;
                 }
                 System.out.println(answer);
                 break;
